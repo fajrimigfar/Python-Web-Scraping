@@ -9,6 +9,21 @@ def data_covid():
     return data
 
 update = data_covid().get("update")
-print(update.get("penambahan"))
-print(update.get("total"))
+penambahan = update.get("penambahan")
+total = update.get("total")
+
+tanggal = penambahan.get("tanggal")
+print(tanggal)
+penambahan_positif = penambahan.get("jumlah_positif")
+print(penambahan_positif)
+penambahan_meninggal = penambahan.get("jumlah_meninggal")
+print(penambahan_meninggal)
+penambahan_sembuh = penambahan.get("jumlah_sembuh")
+print(penambahan_sembuh)
+total_positif = total.get("jumlah_positif")
+print(total_positif)
+total_meninggal = total.get("jumlah_meninggal")
+print(total_meninggal)
+total_sembuh = total.get("jumlah_sembuh")
+print(total_sembuh)
 input("enter to exit")
