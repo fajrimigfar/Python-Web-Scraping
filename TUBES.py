@@ -107,12 +107,13 @@ def PertambahanHarianProvinsi(namaProvinsi):
 # Data untuk harian tiap provinsi
 def PertambahanHariTertentuProvinsi(namaProvinsi, indeks):
     data = data_covid(namaProvinsi)
+    provinsi = data.get("provinsi")
     arrHarian = data.get("list_perkembangan")
     arr_positif_harian = arrHarian[indeks-1].get("KASUS")
     arr_dirawat_harian = arrHarian[indeks-1].get("DIRAWAT_OR_ISOLASI")
     arr_sembuh_harian = arrHarian[indeks-1].get("SEMBUH")
     arr_meninggal_harian = arrHarian[indeks-1].get("MENINGGAL")
-    output_hari_tertentu_provinsi = f"Jumlah data covid hari ke {indeks} \nJumlah Positif : {arr_positif_harian} \nJumlah Dirawat : {arr_dirawat_harian} \nJumlah Sembuh : {arr_sembuh_harian} \nJumlah Meninggal : {arr_meninggal_harian} \n"
+    output_hari_tertentu_provinsi = f"Jumlah data covid di {provinsi} hari ke {indeks} \nJumlah Positif : {arr_positif_harian} \nJumlah Dirawat : {arr_dirawat_harian} \nJumlah Sembuh : {arr_sembuh_harian} \nJumlah Meninggal : {arr_meninggal_harian} \n"
     return output_hari_tertentu_provinsi
 
 
